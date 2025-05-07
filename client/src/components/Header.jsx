@@ -1,9 +1,17 @@
-import React from 'react'
+// src/components/Navbar.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Header() {
+const Navbar = () => {
   return (
-    <div>header</div>
-  )
-}
+    <nav className="bg-black text-white p-4 flex justify-between items-center">
+      <h1 className="text-xl font-bold">📝 MyBlog</h1>
+      <div className="space-x-4">
+        <Link to="/" className="hover:underline">Home</Link>
+        <Link to="/create" className="hover:underline">New Post</Link>
+      </div>
+    </nav>
+  );
+};
 
-export default Header;
+export default Navbar;
